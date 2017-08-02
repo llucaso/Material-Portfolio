@@ -1,0 +1,105 @@
+body
+	background-color: #f5f5f5
+	background-image: url("../images/main_bg.png")
+
+.big-box
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 200px
+//Cube structure
+.container
+	width: 500px
+	height: 500px
+	position: relative
+	perspective: 1000px
+.cube
+	width: 100%
+	height: 100%
+	position: absolute
+	transform-style: preserve-3d
+	transition: 0.5s transform linear
+.cube > div
+	width: 500px
+	height: 500px
+	box-sizing: border-box
+	position: absolute
+	background: #ffffff
+.cube .front
+	transform: rotateX(0deg) translateZ(250px)
+	border-radius: 5px
+	box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.1)
+.cube .back
+	background: #2eca7f
+	transform: rotateX(180deg) translateZ(249px)
+	border-radius: 5px
+.cube .right 
+	background: #2eca7f
+	transform: rotateY(90deg) translateZ(249px)
+	border-radius: 5px
+.cube .left 
+	background: #2eca7f
+	transform: rotateY(-90deg) translateZ(249px)
+	border-radius: 5px
+.cube .top 
+	transform: rotateX(90deg) translateZ(249px)
+	border-radius: 5px
+	background: #2eca7f
+.cube .bottom 
+	transform: rotateX(-90deg) translateZ(249px)
+	border-radius: 5px
+	background: #2eca7f
+.cube.show-front
+	transform: rotateX(0deg)
+.cube.show-back
+	transform: rotateX(-180deg)
+.cube.show-right
+	transform: rotateY(-90deg)
+.cube.show-left
+	transform: rotateY(90deg)
+.cube.show-top
+	transform: rotateX(-90deg)
+.cube.show-bottom
+	transform: rotateX(90deg)
+
+.page-header
+	background: #2eca7f url("../images/main_bg.png")
+	-webkit-background-size: cover
+	background-attachment: scroll
+	background-position: center center
+	background-repeat: no-repeat
+	padding: 100px
+	border-top-left-radius: 5px
+	border-top-right-radius: 5px
+	.title
+		h1
+			position: absolute
+			font-family: 'Lato', sans-serif
+			color: #ffffff
+			font-size: 30px
+			font-weight: 700
+			right: 10px
+			top: 75px
+		h2
+			position: absolute
+			font-family: 'Lato', sans-serif
+			color: #ffffff
+			font-size: 15px
+			right: 10px
+			top: 120px
+	.social-links
+
+		position: absolute
+		right: 10px 
+		top: 10px
+		a
+			display: inline-block
+			background: #ffffff
+			color: #9e9e9e
+			border-radius: 50%
+			height: 20px
+			width: 20px
+			text-align: center
+			font-size: 16px
+
+			

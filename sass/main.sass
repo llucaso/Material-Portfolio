@@ -2,17 +2,12 @@ body
 	background-color: #f5f5f5
 	background-image: url("../images/main_bg.png")
 
-.row:before,
-.row:after
-	content: ""
-	display: table
-	clear: both
-
 .big-box
 	display: flex
 	justify-content: center
 	align-items: center
 	align-content: center
+
 //Cube structure
 .container
 	width: 550px
@@ -50,7 +45,7 @@ body
 .cube .top 
 	transform: rotateX(90deg) translateZ(300px)
 	border-radius: 5px
-	background: #2eca7f
+	background: #ffffff
 .cube .bottom 
 	transform: rotateX(-90deg) translateZ(300px)
 	border-radius: 5px
@@ -68,6 +63,7 @@ body
 .cube.show-bottom
 	transform: rotateX(90deg)
 
+// Home page
 .page-header
 	background: #2eca7f url("../images/main_bg.png")
 	-webkit-background-size: cover
@@ -145,7 +141,6 @@ body
 				webkit-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.2)
 				moz-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.2)
 				box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.2)
-
 			
 .block-title
 	font-size: 21px
@@ -198,6 +193,25 @@ body
 			display: inline-block
 			min-width: 60px
 
+// Resume
+
+.resume-header
+	background: #2eca7f url("../images/main_bg.png")
+	-webkit-background-size: cover
+	background-attachment: scroll
+	background-position: center center
+	background-repeat: no-repeat
+	padding: 70px
+	border-top-left-radius: 5px
+	border-top-right-radius: 5px
+	h1
+		position: absolute
+		font-family: 'Montserrat', sans-serif
+		color: #ffffff
+		font-size: 43px
+		font-weight: 700
+		right: 10px
+		top: 23px
 
 
 
@@ -218,7 +232,13 @@ body
 
 
 
+// Grid structure
 
+.row:before,
+.row:after
+	content: ""
+	display: table
+	clear: both
 
 [class*="col-"]
 	float: left

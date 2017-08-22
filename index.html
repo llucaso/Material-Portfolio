@@ -1,100 +1,102 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>3D cube</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
-	<div class="fixed-action-btn horizontal click-to-toggle">
-    <a class="btn-floating btn-large red">
-      <i class="material-icons">menu</i>
-    </a>
-    <ul>
-      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
-  </div>
-	<div class="big-box">
-		<div class="container">
-			<div class="cube show-front">
-				<div class="front">
-					<div class="page-header">
-						<div class="avatar-picture">
-							<img src="images/avatar.png" alt="avatar">
-						</div>
-						<div class="title">
-							<h1>Łukasz Rędziński</h1>
-							<h2>Frontend-developer</h2>
-						</div>
-						<div class="social-links">
-							<a href=""><i class="fa fa-linkedin"></i></a>
-							<a href=""><i class="fa fa-github"></i></a>
-							<a href=""><i class="fa fa-codepen"></i></a>
-						</div>
-					</div>
-					<div class="home row">
-						<div class="col-6">
-							<h1 class="block-title">O <p>mnie</p></h1>
-							<h2 class="block-info">Cześc jestem Łukasz.<br> Moją pasją jest kodowanie. Codziennie uczę się używania nowych narzędzi. Staram się
-								aby efekty mojej pracy były z dnia na dzień coraz lepsze.
-							</h2>
-							<div class="download-resume">
-								<a href="" class="btn btn-secondary">Curriculum vitae</a>
+	<body>
+		
+		<div class="big-box">
+
+			<div class="container">
+				<div class="navi-buttons">
+					<ul id="nav" class="site-main-menu">
+						<li><a class="waves-effect waves-light btn" href="#" id="front">O MNIE</a></li>
+						<li><a class="waves-effect waves-light btn" href="#" id="top">Projekty</a></li>
+						<li><a class="waves-effect waves-light btn" href="#" id="right">Umiejętności</a></li>
+						<li><a class="waves-effect waves-light btn" href="#" id="bottom">Kontakt</a></li>
+					</ul>
+				</div>
+				<div class="cube" id="cube">
+					<div class="front">
+						<div class="page-header">
+							<div class="avatar-picture">
+								<img src="images/avatar.png" alt="avatar">
+							</div>
+							<div class="title">
+								<h1>Łukasz Rędziński</h1>
+								<h2>Frontend-developer</h2>
+							</div>
+							<div class="social-links">
+								<a href=""><i class="fa fa-linkedin"></i></a>
+								<a href=""><i class="fa fa-github"></i></a>
+								<a href=""><i class="fa fa-codepen"></i></a>
 							</div>
 						</div>
-						<div class="col-6">
-							<ul class="info-list">
-								<li>
-									<span class="title">Wiek</span>
-									<span class="value">28</span>
-								</li>
-								<li>
-									<span class="title">Miasto</span>
-									<span class="value">Gdynia</span>
-								</li>
-								<li>
-									<span class="title">e-mail</span>
-									<span class="value" class="e-mail"><a href="mailto:lredzinski@gmail.com">lredzinski@gmail.com</a></span>
-								</li>
-								<li>
-									<span class="title">Telefon</span>
-									<span class="value">+48 881 558 448</span>
-								</li>
-							</ul>
-						</div>
-						
-					</div>
-				</div>
-				<div class="back"></div>
-				<div class="right"></div>
-				<div class="left"></div>
-				<div class="top">
-					<div class="resume">
-						<div class="resume-header">
-							<h1>Curriculum vitae</h1>
-
-
-
+						<div class="home row">
+							<div class="col-6">
+								<h1 class="block-title"><p>O mnie</p></h1>
+								<h2 class="block-info">Cześc jestem Łukasz.<br> Moją pasją jest kodowanie. Codziennie uczę się używania nowych narzędzi. Staram się
+									aby efekty mojej pracy były z dnia na dzień coraz lepsze.
+								</h2>
+								<div class="download-resume">
+									<a href="" class="btn btn-secondary">Curriculum vitae</a>
+								</div>
+							</div>
+							<div class="col-6">
+								<ul class="info-list">
+									<li>
+										<span class="title">Wiek</span>
+										<span class="value">28</span>
+									</li>
+									<li>
+										<span class="title">Miasto</span>
+										<span class="value">Gdynia</span>
+									</li>
+									<li>
+										<span class="title">e-mail</span>
+										<span class="value" class="e-mail"><a href="mailto:lredzinski@gmail.com">lredzinski@gmail.com</a></span>
+									</li>
+									<li>
+										<span class="title">Telefon</span>
+										<span class="value">+48 881 558 448</span>
+									</li>
+								</ul>
+							</div>
+							
 						</div>
 					</div>
+					<div class="back"></div>
+					<div class="right"></div>
+					<div class="left"></div>
+					<div class="top">
+						<div class="page-header-projekty">
+							<div class="title-projekty">
+								<h1>Projekty</h1>
+							</div>
+						</div>
+						<div class="container-resume">
+							
+						</div>
+					<div class="bottom"></div>
 				</div>
-				<div class="bottom"></div>
 			</div>
 		</div>
-	</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
-</body>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.sliphover.min.js"></script>
+	</body>
 </html>
